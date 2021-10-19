@@ -1,0 +1,223 @@
+/*********GLOBAL STYLING*********/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: #fff;
+  font: 400 16px/24px "Open Sans", Arial, sans-serif;
+  color: #000;
+  text-rendering: optimizeLegibility;
+  text-shadow: rgb(0 0 0 / 1%) 0 0 1px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*********UTILITIES**************/
+a {
+  text-decoration: none;
+}
+
+p,
+a,
+li {
+  font: 300 1rem/1.625rem "Overpass", Arial, sans-serif;
+  margin-top: 0;
+  color: #6b7780;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*********NAVBAR****************/
+nav {
+  width: 100%;
+  background-color: #fff;
+}
+
+nav .wrapper {
+  padding: 2.375rem 4.875rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  padding: 5.125rem 2rem;
+}
+
+/**********LOGO & LINKS*********/
+nav .wrapper .left {
+  display: flex;
+  align-items: center;
+}
+
+nav .wrapper .left img {
+  margin-right: 0.5rem;
+}
+
+nav .wrapper .left .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav .wrapper .left .links a {
+  margin: 0 22px;
+  font: 600 1rem/1.3125rem "Overpass", Arial, sans-serif;
+}
+
+nav .wrapper .right {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  color: #6b7780;
+  background-color: #fff;
+  font: 600 1rem/1.3125rem "Overpass", Arial, sans-serif;
+  padding-right: 2rem;
+}
+
+.dropbtn span {
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+nav .wrapper .right .button {
+  min-width: 120px;
+  padding: 1rem;
+  display: block;
+  margin: 0;
+  width: fit-content;
+  font: 700 1rem/0.9rem "Overpass", Arial, sans-serif;
+  border-radius: 10px;
+  background-color: #7852f4;
+  color: #fff;
+  transition: background-color 0.2s ease-in, border 0.2s ease-in,
+    color 0.3s ease-in;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+/*********MOBILE_MENU**************/
+nav .wrapper .right .mobile {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav .wrapper .right .mobile .menu_icon {
+  display: block;
+  cursor: pointer;
+}
+
+nav .wrapper .right .mobile .menu_icon .line {
+  height: 2px;
+  width: 25px;
+  display: block;
+  content: " ";
+  background-color: #7852f4;
+  margin-bottom: 7.5px;
+  transition: all 0.5s ease-in-out;
+}
+
+nav .wrapper .right .mobile .menu_icon .line:last-child {
+  margin-bottom: 0;
+}
+
+nav .wrapper .right .mobile .mobile_menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(215, 218, 219, 0.72);
+  transition: right 0.2s ease-in-out;
+  z-index: 101;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+nav .wrapper .right .mobile .mobile__menu .shown {
+    right: 0;
+}
+
+nav .wrapper .right .hidden {
+    display: none;
+}
+
+nav .wrapper .right .mobile .mobile_menu .inner {
+  width: 60%;
+  max-width: 260px;
+  height: 100%;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  transition: right 0.2s ease-in-out;
+  right: -100%;
+  z-index: 110;
+}
+
+nav .wrapper .right .mobile .mobile_menu .inner .body {
+  display: flex;
+  flex-direction: column;
+}
+
+nav .wrapper .right .mobile .mobile_menu .inner .body a {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+[aria-current]:not([aria-current="false"]) {
+  color: #000 !important;
+}
+
+
+
+/*************RESPONSIVE***************/
+@media (max-width: 1402px) {
+  nav .wrapper .left .links, nav .wrapper .right .dropdown, .button_container  {
+    display: none;
+  }
+}
+
+@media (min-width: 1402px) {
+nav .wrapper .right .mobile {
+    display: none;
+  }
+}
+
+

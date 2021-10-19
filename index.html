@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>ClearVue_Clone</title>
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper">
+        <div class="left">
+          <a href="./home"
+            ><img
+              style="height: 35px; width: 200px"
+              src="./assets/img/clearvue-small.png"
+              alt="ClearVue"
+          /></a>
+          <div class="links">
+            <a href="" class="nav_link">Lite</a>
+            <a href="" class="nav_link">PRO</a>
+            <a href="" class="nav_link">IoT</a>
+            <a href="" class="nav_link">Case Studies</a>
+            <a href="" class="nav_link">About</a>
+            <a href="" class="nav_link">Meet the Team</a>
+            <a href="" class="nav_link">News & Insight</a>
+          </div>
+        </div>
+        <div class="right">
+          <div class="dropdown">
+            <button class="dropbtn">Log in <span> | </span> Sign up</button>
+            <div class="dropdown-content">
+              <a href="">Log in Lite</a>
+              <a href="">Log in PRO</a>
+              <a href="">Sign Up</a>
+            </div>
+          </div>
+          <a href="" class="button_container">
+            <button class="button">Get Started</button>
+          </a>
+          <div class="mobile">
+            <div class="menu_icon" onclick="showMobileNav()">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+          <section class="mobile_menu shown hidden" onclick="hideMobileNav()">
+            <section class="inner">
+              <div class="body">
+                <a href="" aria-current="page" class="nav_link">Home</a>
+                <a href="" class="nav_link">Lite</a>
+                <a href="" class="nav_link">PRO</a>
+                <a href="" class="nav_link">IoT</a>
+                <a href="" class="nav_link">Case Studies</a>
+                <a href="" class="nav_link">About</a>
+                <a href="" class="nav_link">Meet the Team</a>
+                <a href="">Log in Lite</a>
+                <a href="">Log in PRO</a>
+                <a href="">Sign Up</a>
+                <a href="" class="nav_link">News & Insight</a>
+                <a href="" class="button_container">
+                  <button class="button">Get Started</button>
+                </a>
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+    </nav>
+    <script src="./main.js"></script>
+  </body>
+</html>
